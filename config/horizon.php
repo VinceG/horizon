@@ -33,13 +33,25 @@ return [
     | Horizon Default URI
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the default base url for the horizon dashboard
+    | Here you may configure the default base url for the horizon dashboard routes
     |
     | Defaults to 'horizon'
     |
     */
 
     'uri' => env('HORIZON_URI', 'horizon'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Horizon Default Base
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the default base url for the horizon resources
+    |
+    | Defaults to 'horizon'
+    |
+    */
+    'base' => env('HORIZON_BASE', '/'),
 
     /*
     |--------------------------------------------------------------------------
