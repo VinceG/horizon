@@ -15,7 +15,7 @@ $('body').tooltip({
 });
 
 Vue.prototype.$http = axios.create({
-  baseURL: `${location.protocol}//${location.host}/${horizon.uri}`
+  baseURL: `${location.protocol}//${location.host}${horizon.base}${horizon.uri}`
 });
 
 window.Bus = new Vue({name: 'Bus'});
@@ -78,7 +78,9 @@ new Vue({
      * The component's data.
      */
     data() {
-        return {}
+        return {
+            baseUrl: `${horizon.base}`
+        }
     },
 
     render: h => h(App),
